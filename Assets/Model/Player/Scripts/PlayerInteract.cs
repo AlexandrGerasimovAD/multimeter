@@ -8,7 +8,7 @@ public class PlayerInteract : MonoBehaviour
 {
     public Camera mainCamera;
     private Outline _LastOutlineObj;//подсветка
-    public float counterMousScroll=0f;
+    public float counterMousScroll=1;
     private float minimumScroll = 0;
     public TMP_Text textscreen;
     public TMP_Text Vtextscreen;
@@ -35,15 +35,14 @@ public class PlayerInteract : MonoBehaviour
                 _LastOutlineObj =
                 hit.transform.gameObject.GetComponent<Outline>();
                _LastOutlineObj.OutlineWidth = 6;
+                //если луч коснулся обьекта у которого есть оутлайн то увеличить ширину оутлайн
                 float mw = Input.GetAxis("Mouse ScrollWheel")*10;
                 
-                
-
                 if ((counterMousScroll + mw) > minimumScroll)
                 {
                     counterMousScroll += mw;
                 }
-                //если луч коснулся обьекта у которого есть оутлайн то увеличить ширину оутлайн
+                
                 if (counterMousScroll > 5) counterMousScroll = 5;
                 if (counterMousScroll == 5)
                 {

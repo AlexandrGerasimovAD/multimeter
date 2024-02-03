@@ -1462,7 +1462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 963194227}
-  counterMousScroll: 5
+  counterMousScroll: 4
   textscreen: {fileID: 749219060}
   Vtextscreen: {fileID: 113683153}
   Atextscreen: {fileID: 1157309662}
